@@ -1,7 +1,20 @@
 <h1><%= pluralize(@projects.length, "Project") %></h1>
 
-<ul>
-  <% @projects.each do |project| %>
-    <li><%= project %></li>
-  <% end %>
-</ul>
+<% @projects.each do |project| %>
+<table >
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Target</th>
+    <th>When end</th>
+    <th>Website</th>
+  </tr>
+  <tr>
+    <td><%= link_to project.name, project %> </td>  
+    <td><%= project.description %> </td>  
+    <td><%= number_to_currency(project.target) %> </td>  
+    <td><%= project.release %> </td>  
+    <td><%= project.website %> </td>  
+  </tr>
+</table>
+<% end %>

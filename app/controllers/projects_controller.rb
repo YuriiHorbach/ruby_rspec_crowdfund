@@ -1,7 +1,15 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = ['Project 1', 'Project 2', 'Project 3', 'Project 4']  
+    @projects = Project.all
+  end
+
+  def show
+    @project = Project.find(params[:id])
+  end
+
+  def edit
+    @project = Project.find(params[:id])
   end
 
 end

@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Target</th>
+    <th>When end</th>
+    <th>Website</th>
+  </tr>
+  <tr>
+    <td><%= @project.name %> </td>  
+    <td><%= @project.description %> </td>  
+    <td><%= number_to_currency(@project.target) %> </td>  
+    <td><%= @project.release %> </td>  
+    <td><%= @project.website %> </td>  
+  </tr>
+</table>
+
+<%= link_to "All projects", projects_path %>
